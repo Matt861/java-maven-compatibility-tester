@@ -25,15 +25,15 @@ Bash:
 mvn clean install -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
 mvn dependency:resolve -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
 
-mvn clean install -Dmaven.repo.local="repos/repo2"
-mvn dependency:resolve -Dmaven.repo.local="repos/repo2"
+mvn clean install -Dmaven.repo.local="repos/repo4"
+mvn dependency:resolve -Dmaven.repo.local="repos/repo4"
 
 
 Generate dependency tree text file:
 
 mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
 
-mvn dependency:tree -Dverbose -DoutputFile=dependency-tree5.txt -DoutputType=text -Dmaven.repo.local="repos/repo2"
+mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="repos/repo4"
 
 See all trees that contain a dependency:
 
