@@ -1,0 +1,391 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] crt-dependencies-parent                                            [pom]
+[INFO] crt-dependencies                                                   [pom]
+[INFO] crt-test-dependencies                                              [pom]
+[INFO] crt-classpath-dependencies                                         [pom]
+[INFO] 
+[INFO] ----------------< com.lmco.crt:crt-dependencies-parent >----------------
+[INFO] Building crt-dependencies-parent 0.5.0-SNAPSHOT                    [1/4]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies-parent ---
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] -------------------< com.lmco.crt:crt-dependencies >--------------------
+[INFO] Building crt-dependencies 0.5.0-SNAPSHOT                           [2/4]
+[INFO]   from crt-service\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies ---
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 201 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-dependencies-0.5.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] -----------------< com.lmco.crt:crt-test-dependencies >-----------------
+[INFO] Building crt-test-dependencies 0.5.0-SNAPSHOT                      [3/4]
+[INFO]   from crt-test\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-test-dependencies ---
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-test-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-test-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 79 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-test-dependencies-0.5.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] --------------< com.lmco.crt:crt-classpath-dependencies >---------------
+[INFO] Building crt-classpath-dependencies 0.5.0-SNAPSHOT                 [4/4]
+[INFO]   from crt-classpath\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-classpath-dependencies ---
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-classpath-dependencies ---
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for crt-dependencies-parent 0.5.0-SNAPSHOT:
+[INFO] 
+[INFO] crt-dependencies-parent ............................ SUCCESS [  0.197 s]
+[INFO] crt-dependencies ................................... SUCCESS [  3.305 s]
+[INFO] crt-test-dependencies .............................. SUCCESS [  0.977 s]
+[INFO] crt-classpath-dependencies ......................... FAILURE [  0.273 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.835 s
+[INFO] Finished at: 2026-01-08T19:10:14-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.6.2:enforce (enforce-build-gates) on project crt-classpath-dependencies: 
+[ERROR] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence failed with message:
+[ERROR] Failed while enforcing releasability.
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven.resolver:maven-resolver-impl:jar:1.9.22. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven.resolver:maven-resolver-impl:jar:1.9.22:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven.resolver:maven-resolver-impl:jar:1.9.25:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for commons-cli:commons-cli:jar:1.7.0. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-codegen:jar:2.4.46:compile
+[ERROR]         +-commons-cli:commons-cli:jar:1.7.0:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-commons-cli:commons-cli:jar:1.9.0:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen-generators:jar:1.0.59:compile
+[ERROR]       +-commons-cli:commons-cli:jar:1.9.0:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven.resolver:maven-resolver-util:jar:1.9.22. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven.resolver:maven-resolver-util:jar:1.9.22:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven.resolver:maven-resolver-util:jar:1.9.25:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-settings-builder:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-settings-builder:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-settings-builder:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-model:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-model:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-plugin-api:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-model:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-model:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for io.swagger:swagger-compat-spec-parser:jar:1.0.75. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger.parser.v3:swagger-parser:jar:2.1.35:compile
+[ERROR]         +-io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.1.35:compile
+[ERROR]           +-io.swagger:swagger-compat-spec-parser:jar:1.0.75:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-codegen:jar:2.4.46:compile
+[ERROR]         +-io.swagger:swagger-compat-spec-parser:jar:1.0.71:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M3. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M3:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-plugin-api:jar:3.9.9:compile
+[ERROR]       +-org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M3:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M4:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-resolver-provider:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-resolver-provider:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-resolver-provider:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.codehaus.plexus:plexus-interpolation:jar:1.27. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.codehaus.plexus:plexus-interpolation:jar:1.27:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.codehaus.plexus:plexus-interpolation:jar:1.29:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-artifact:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-artifact:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-plugin-api:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-artifact:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-artifact:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-settings:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-settings:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-settings:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for io.swagger:swagger-core:jar:1.6.16. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-parser:jar:1.0.75:compile
+[ERROR]         +-io.swagger:swagger-core:jar:1.6.16:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger.parser.v3:swagger-parser:jar:2.1.35:compile
+[ERROR]         +-io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.1.35:compile
+[ERROR]           +-io.swagger:swagger-core:jar:1.6.16:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-codegen:jar:2.4.46:compile
+[ERROR]         +-io.swagger:swagger-core:jar:1.6.14:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for com.samskivert:jmustache:jar:1.15. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-codegen:jar:2.4.46:compile
+[ERROR]         +-com.samskivert:jmustache:jar:1.15:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-com.samskivert:jmustache:jar:1.16:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-model-builder:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-model-builder:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-model-builder:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-repository-metadata:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven:maven-repository-metadata:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-repository-metadata:jar:3.9.12:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven.resolver:maven-resolver-api:jar:1.9.22. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-compat:jar:3.9.9:compile
+[ERROR]       +-org.apache.maven.resolver:maven-resolver-api:jar:1.9.22:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven.resolver:maven-resolver-api:jar:1.9.25:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven.resolver:maven-resolver-spi:jar:1.9.25:compile
+[ERROR]       +-org.apache.maven.resolver:maven-resolver-api:jar:1.9.25:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.codehaus.plexus:plexus-classworlds:jar:2.8.0. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-plugin-api:jar:3.9.9:compile
+[ERROR]       +-org.codehaus.plexus:plexus-classworlds:jar:2.8.0:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.codehaus.plexus:plexus-classworlds:jar:2.9.0:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for io.swagger.codegen.v3:swagger-codegen:jar:3.0.75. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen-generators:jar:1.0.59:compile
+[ERROR]       +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.74:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for io.swagger:swagger-parser:jar:1.0.75. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-parser:jar:1.0.75:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger.parser.v3:swagger-parser:jar:2.1.35:compile
+[ERROR]         +-io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.1.35:compile
+[ERROR]           +-io.swagger:swagger-parser:jar:1.0.75:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:jar:3.0.75:compile
+[ERROR]       +-io.swagger:swagger-codegen:jar:2.4.46:compile
+[ERROR]         +-io.swagger:swagger-parser:jar:1.0.71:compile
+[ERROR] 
+[ERROR] 
+[ERROR] Dependency convergence error for org.apache.maven:maven-plugin-api:jar:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:jar:3.0.75:compile
+[ERROR]     +-org.apache.maven:maven-plugin-api:jar:3.9.9:compile
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:pom:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:jar:3.9.12:compile
+[ERROR]     +-org.apache.maven:maven-plugin-api:jar:3.9.12:compile
+[ERROR] 
+[ERROR] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps failed with message:
+[ERROR] Failed while enforcing RequireUpperBoundDeps. The error(s) are [
+[ERROR] Require upper bound dependencies error for io.swagger:swagger-compat-spec-parser:1.0.71. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:3.0.75
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:3.0.75
+[ERROR]       +-io.swagger:swagger-codegen:2.4.46
+[ERROR]         +-io.swagger:swagger-compat-spec-parser:1.0.71
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:3.0.75
+[ERROR]     +-io.swagger.codegen.v3:swagger-codegen:3.0.75
+[ERROR]       +-io.swagger.parser.v3:swagger-parser:2.1.35
+[ERROR]         +-io.swagger.parser.v3:swagger-parser-v2-converter:2.1.35
+[ERROR]           +-io.swagger:swagger-compat-spec-parser:1.0.75
+[ERROR] , 
+[ERROR] Require upper bound dependencies error for org.apache.maven:maven-plugin-api:3.9.9. Paths to dependency are:
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:0.5.0-SNAPSHOT
+[ERROR]   +-io.swagger.codegen.v3:swagger-codegen-maven-plugin:3.0.75
+[ERROR]     +-org.apache.maven:maven-plugin-api:3.9.9
+[ERROR] and
+[ERROR] +-com.lmco.crt:crt-classpath-dependencies:0.5.0-SNAPSHOT
+[ERROR]   +-org.apache.maven:maven-core:3.9.12
+[ERROR]     +-org.apache.maven:maven-plugin-api:3.9.12
+[ERROR] ]
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :crt-classpath-dependencies

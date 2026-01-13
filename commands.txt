@@ -1,0 +1,40 @@
+Change java version:
+
+export JAVA_HOME=/path/to/jdk  (export JAVA_HOME=/c/Users/mattw/.jdks/openjdk-25.0.1)
+export PATH="$JAVA_HOME/bin:$PATH"
+mvn -v
+mvn clean verify
+
+
+Versions Maven Plugin to update properties/parents:
+
+mvn versions:display-dependency-updates
+mvn versions:use-latest-versions
+mvn versions:update-parent
+
+    Output to text file in bash:
+
+    mvn versions:display-dependency-updates > dependency-updates.txt 2>&1
+
+
+Windows:
+mvn clean install -D"maven.repo.local"="path\to\directory\{REPO FOLDER NAME}"
+mvn dependency:resolve -D"maven.repo.local"="path\to\directory\{REPO FOLDER NAME}"
+
+Bash:
+mvn clean install -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
+mvn dependency:resolve -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
+
+mvn clean install -Dmaven.repo.local="repos/repo2"
+mvn dependency:resolve -Dmaven.repo.local="repos/repo2"
+
+
+Generate dependency tree text file:
+
+mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
+
+mvn dependency:tree -Dverbose -DoutputFile=dependency-tree5.txt -DoutputType=text -Dmaven.repo.local="repos/repo2"
+
+See all trees that contain a dependency:
+
+mvn -Dincludes=commons-codec:commons-codec -Dverbose dependency:tree

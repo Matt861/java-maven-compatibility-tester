@@ -1,0 +1,90 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] crt-dependencies-parent                                            [pom]
+[INFO] crt-dependencies                                                   [pom]
+[INFO] crt-test-dependencies                                              [pom]
+[INFO] crt-classpath-dependencies                                         [pom]
+[INFO] 
+[INFO] ----------------< com.lmco.crt:crt-dependencies-parent >----------------
+[INFO] Building crt-dependencies-parent 0.5.0-SNAPSHOT                    [1/4]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies-parent ---
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] -------------------< com.lmco.crt:crt-dependencies >--------------------
+[INFO] Building crt-dependencies 0.5.0-SNAPSHOT                           [2/4]
+[INFO]   from crt-service\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies ---
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 201 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-dependencies-0.5.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] -----------------< com.lmco.crt:crt-test-dependencies >-----------------
+[INFO] Building crt-test-dependencies 0.5.0-SNAPSHOT                      [3/4]
+[INFO]   from crt-test\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-test-dependencies ---
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-test-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-test-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 79 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-test-dependencies-0.5.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] --------------< com.lmco.crt:crt-classpath-dependencies >---------------
+[INFO] Building crt-classpath-dependencies 0.5.0-SNAPSHOT                 [4/4]
+[INFO]   from crt-classpath\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-classpath-dependencies ---
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-classpath-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-classpath-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 119 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-classpath\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-classpath-dependencies-0.5.0-SNAPSHOT-cyclonedx.json
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for crt-dependencies-parent 0.5.0-SNAPSHOT:
+[INFO] 
+[INFO] crt-dependencies-parent ............................ SUCCESS [  0.230 s]
+[INFO] crt-dependencies ................................... SUCCESS [  4.244 s]
+[INFO] crt-test-dependencies .............................. SUCCESS [  1.262 s]
+[INFO] crt-classpath-dependencies ......................... SUCCESS [  1.318 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.145 s
+[INFO] Finished at: 2026-01-08T20:04:51-06:00
+[INFO] ------------------------------------------------------------------------
