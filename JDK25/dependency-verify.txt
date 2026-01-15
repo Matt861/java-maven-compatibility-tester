@@ -8,7 +8,7 @@
 [INFO] crt-classpath-dependencies                                         [pom]
 [INFO] 
 [INFO] ----------------< com.lmco.crt:crt-dependencies-parent >----------------
-[INFO] Building crt-dependencies-parent 0.5.0-SNAPSHOT                    [1/4]
+[INFO] Building crt-dependencies-parent 1.0.0-SNAPSHOT                    [1/4]
 [INFO]   from pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
@@ -21,428 +21,71 @@
 [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
 [INFO] 
 [INFO] -------------------< com.lmco.crt:crt-dependencies >--------------------
-[INFO] Building crt-dependencies 0.5.0-SNAPSHOT                           [2/4]
+[INFO] Building crt-dependencies 1.0.0-SNAPSHOT                           [2/4]
 [INFO]   from crt-service\pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
 [INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies ---
-[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-service\target
 [INFO] 
 [INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies ---
 [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
 [INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
 [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
 [INFO] 
-[INFO] --- cyclonedx:2.5.1:makeAggregateBom (default) @ crt-dependencies ---
-[ERROR] An error occurred attempting to read POM
-org.codehaus.plexus.util.xml.pull.XmlPullParserException: UTF-8 BOM plus xml decl of ISO-8859-1 is incompatible (position: START_DOCUMENT seen <?xml version="1.0" encoding="ISO-8859-1"... @1:42) 
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDeclWithVersion (MXParser.java:2762)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDecl (MXParser.java:2683)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parsePI (MXParser.java:2550)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseProlog (MXParser.java:1480)
-    at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl (MXParser.java:1423)
-    at org.codehaus.plexus.util.xml.pull.MXParser.next (MXParser.java:1133)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:645)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:672)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:687)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:731)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:718)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.retrieveParentProject (BaseCycloneDxMojo.java:666)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.getClosestMetadata (BaseCycloneDxMojo.java:500)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.convert (BaseCycloneDxMojo.java:457)
-    at org.cyclonedx.maven.CycloneDxAggregateMojo.execute (CycloneDxAggregateMojo.java:121)
-    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
-    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
-    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
-    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
-    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
-    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
-    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:919)
-    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:285)
-    at org.apache.maven.cli.MavenCli.main (MavenCli.java:207)
-    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
-    at java.lang.reflect.Method.invoke (Method.java:565)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
-[ERROR] An error occurred attempting to read POM
-org.codehaus.plexus.util.xml.pull.XmlPullParserException: UTF-8 BOM plus xml decl of ISO-8859-1 is incompatible (position: START_DOCUMENT seen <?xml version="1.0" encoding="ISO-8859-1"... @1:42) 
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDeclWithVersion (MXParser.java:2762)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDecl (MXParser.java:2683)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parsePI (MXParser.java:2550)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseProlog (MXParser.java:1480)
-    at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl (MXParser.java:1423)
-    at org.codehaus.plexus.util.xml.pull.MXParser.next (MXParser.java:1133)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:645)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:672)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:687)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:731)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:718)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.retrieveParentProject (BaseCycloneDxMojo.java:666)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.getClosestMetadata (BaseCycloneDxMojo.java:500)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.convert (BaseCycloneDxMojo.java:457)
-    at org.cyclonedx.maven.CycloneDxAggregateMojo.execute (CycloneDxAggregateMojo.java:121)
-    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
-    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
-    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
-    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
-    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
-    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
-    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:919)
-    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:285)
-    at org.apache.maven.cli.MavenCli.main (MavenCli.java:207)
-    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
-    at java.lang.reflect.Method.invoke (Method.java:565)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
-[ERROR] An error occurred attempting to read POM
-org.codehaus.plexus.util.xml.pull.XmlPullParserException: UTF-8 BOM plus xml decl of ISO-8859-1 is incompatible (position: START_DOCUMENT seen <?xml version="1.0" encoding="ISO-8859-1"... @1:42) 
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDeclWithVersion (MXParser.java:2762)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDecl (MXParser.java:2683)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parsePI (MXParser.java:2550)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseProlog (MXParser.java:1480)
-    at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl (MXParser.java:1423)
-    at org.codehaus.plexus.util.xml.pull.MXParser.next (MXParser.java:1133)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:645)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:672)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:687)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:731)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:718)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.retrieveParentProject (BaseCycloneDxMojo.java:666)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.getClosestMetadata (BaseCycloneDxMojo.java:500)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.convert (BaseCycloneDxMojo.java:457)
-    at org.cyclonedx.maven.CycloneDxAggregateMojo.execute (CycloneDxAggregateMojo.java:121)
-    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
-    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
-    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
-    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
-    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
-    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
-    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:919)
-    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:285)
-    at org.apache.maven.cli.MavenCli.main (MavenCli.java:207)
-    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
-    at java.lang.reflect.Method.invoke (Method.java:565)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
-[ERROR] An error occurred attempting to read POM
-org.codehaus.plexus.util.xml.pull.XmlPullParserException: UTF-8 BOM plus xml decl of ISO-8859-1 is incompatible (position: START_DOCUMENT seen <?xml version="1.0" encoding="ISO-8859-1"... @1:42) 
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDeclWithVersion (MXParser.java:2762)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseXmlDecl (MXParser.java:2683)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parsePI (MXParser.java:2550)
-    at org.codehaus.plexus.util.xml.pull.MXParser.parseProlog (MXParser.java:1480)
-    at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl (MXParser.java:1423)
-    at org.codehaus.plexus.util.xml.pull.MXParser.next (MXParser.java:1133)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:645)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:672)
-    at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read (MavenXpp3Reader.java:687)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:731)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.readPom (BaseCycloneDxMojo.java:718)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.retrieveParentProject (BaseCycloneDxMojo.java:666)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.getClosestMetadata (BaseCycloneDxMojo.java:500)
-    at org.cyclonedx.maven.BaseCycloneDxMojo.convert (BaseCycloneDxMojo.java:457)
-    at org.cyclonedx.maven.CycloneDxAggregateMojo.execute (CycloneDxAggregateMojo.java:121)
-    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
-    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
-    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
-    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
-    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
-    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
-    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
-    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
-    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
-    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:919)
-    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:285)
-    at org.apache.maven.cli.MavenCli.main (MavenCli.java:207)
-    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
-    at java.lang.reflect.Method.invoke (Method.java:565)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
-    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
-[INFO] CycloneDX: Creating BOM
-[INFO] CycloneDX: Writing BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Creating BOM
-[INFO] CycloneDX: Writing BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Creating BOM
-[INFO] CycloneDX: Writing BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-classpath\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-classpath\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Creating BOM
-[INFO] CycloneDX: Writing BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target\cyclone-dx-bom.json
-[INFO] CycloneDX: Validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-service\target\cyclone-dx-bom.json
-[WARNING] artifact com.lmco.crt:crt-dependencies:json:cyclonedx:0.5.0-SNAPSHOT already attached, replace previous instance
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 201 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-service\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-dependencies-1.0.0-SNAPSHOT-cyclonedx.json
 [INFO] 
 [INFO] -----------------< com.lmco.crt:crt-test-dependencies >-----------------
-[INFO] Building crt-test-dependencies 0.5.0-SNAPSHOT                      [3/4]
+[INFO] Building crt-test-dependencies 1.0.0-SNAPSHOT                      [3/4]
 [INFO]   from crt-test\pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
 [INFO] --- clean:3.2.0:clean (default-clean) @ crt-test-dependencies ---
-[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester\JDK25\crt-test\target
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-test\target
 [INFO] 
 [INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-test-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
 [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
-[INFO] ------------------------------------------------------------------------
-[INFO] Reactor Summary for crt-dependencies-parent 0.5.0-SNAPSHOT:
 [INFO] 
-[INFO] crt-dependencies-parent ............................ SUCCESS [  0.225 s]
-[INFO] crt-dependencies ................................... SUCCESS [  7.435 s]
-[INFO] crt-test-dependencies .............................. FAILURE [  0.313 s]
-[INFO] crt-classpath-dependencies ......................... SKIPPED
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-test-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 79 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-test\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-test-dependencies-1.0.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] --------------< com.lmco.crt:crt-classpath-dependencies >---------------
+[INFO] Building crt-classpath-dependencies 1.0.0-SNAPSHOT                 [4/4]
+[INFO]   from crt-classpath\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ crt-classpath-dependencies ---
+[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-classpath\target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-classpath-dependencies ---
+[INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-classpath-dependencies ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.3 with 116 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-classpath\target\cyclone-dx-bom.json
+[INFO]            attaching as crt-classpath-dependencies-1.0.0-SNAPSHOT-cyclonedx.json
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] Reactor Summary for crt-dependencies-parent 1.0.0-SNAPSHOT:
+[INFO] 
+[INFO] crt-dependencies-parent ............................ SUCCESS [  0.200 s]
+[INFO] crt-dependencies ................................... SUCCESS [  3.210 s]
+[INFO] crt-test-dependencies .............................. SUCCESS [  0.952 s]
+[INFO] crt-classpath-dependencies ......................... SUCCESS [  1.012 s]
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.053 s
-[INFO] Finished at: 2026-01-08T18:22:05-06:00
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.6.2:enforce (enforce-build-gates) on project crt-test-dependencies: 
-[ERROR] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence failed with message:
-[ERROR] Failed while enforcing releasability.
-[ERROR] 
-[ERROR] Dependency convergence error for org.ow2.asm:asm:jar:9.9. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:jar:0.8.14:compile
-[ERROR]     +-org.jacoco:org.jacoco.core:jar:0.8.14:compile
-[ERROR]       +-org.ow2.asm:asm:jar:9.9:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:jar:0.8.14:compile
-[ERROR]     +-org.jacoco:org.jacoco.core:jar:0.8.14:compile
-[ERROR]       +-org.ow2.asm:asm-commons:jar:9.9.1:compile
-[ERROR]         +-org.ow2.asm:asm:jar:9.9.1:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-net.minidev:json-smart:jar:2.6.0:compile
-[ERROR]       +-net.minidev:accessors-smart:jar:2.6.0:compile
-[ERROR]         +-org.ow2.asm:asm:jar:9.7.1:compile
-[ERROR] 
-[ERROR] 
-[ERROR] Dependency convergence error for org.ow2.asm:asm-tree:jar:9.9.1. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:jar:0.8.14:compile
-[ERROR]     +-org.jacoco:org.jacoco.core:jar:0.8.14:compile
-[ERROR]       +-org.ow2.asm:asm-commons:jar:9.9.1:compile
-[ERROR]         +-org.ow2.asm:asm-tree:jar:9.9.1:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:jar:0.8.14:compile
-[ERROR]     +-org.jacoco:org.jacoco.core:jar:0.8.14:compile
-[ERROR]       +-org.ow2.asm:asm-tree:jar:9.9:compile
-[ERROR] 
-[ERROR] 
-[ERROR] Dependency convergence error for org.junit.platform:junit-platform-engine:jar:1.12.2. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-com.tngtech.archunit:archunit-junit5:jar:1.4.1:compile
-[ERROR]     +-com.tngtech.archunit:archunit-junit5-engine:jar:1.4.1:runtime
-[ERROR]       +-com.tngtech.archunit:archunit-junit5-engine-api:jar:1.4.1:runtime
-[ERROR]         +-org.junit.platform:junit-platform-engine:jar:1.12.2:runtime
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.junit.jupiter:junit-jupiter:jar:6.0.1:compile
-[ERROR]       +-org.junit.jupiter:junit-jupiter-engine:jar:6.0.1:runtime
-[ERROR]         +-org.junit.platform:junit-platform-engine:jar:6.0.1:runtime
-[ERROR] 
-[ERROR] 
-[ERROR] Dependency convergence error for org.hamcrest:hamcrest:jar:2.1. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.awaitility:awaitility:jar:4.3.0:compile
-[ERROR]       +-org.hamcrest:hamcrest:jar:2.1:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.hamcrest:hamcrest:jar:3.0:compile
-[ERROR] 
-[ERROR] 
-[ERROR] Dependency convergence error for org.junit.jupiter:junit-jupiter-api:jar:5.13.4. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-junit-jupiter:jar:5.21.0:compile
-[ERROR]     +-org.junit.jupiter:junit-jupiter-api:jar:5.13.4:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.junit.jupiter:junit-jupiter:jar:6.0.1:compile
-[ERROR]       +-org.junit.jupiter:junit-jupiter-api:jar:6.0.1:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.junit.jupiter:junit-jupiter:jar:6.0.1:compile
-[ERROR]       +-org.junit.jupiter:junit-jupiter-params:jar:6.0.1:compile
-[ERROR]         +-org.junit.jupiter:junit-jupiter-api:jar:6.0.1:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.junit.jupiter:junit-jupiter:jar:6.0.1:compile
-[ERROR]       +-org.junit.jupiter:junit-jupiter-engine:jar:6.0.1:runtime
-[ERROR]         +-org.junit.jupiter:junit-jupiter-api:jar:6.0.1:runtime
-[ERROR] 
-[ERROR] 
-[ERROR] Dependency convergence error for org.mockito:mockito-core:jar:5.2.0. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-inline:jar:5.2.0:compile
-[ERROR]     +-org.mockito:mockito-core:jar:5.2.0:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-junit-jupiter:jar:5.21.0:compile
-[ERROR]     +-org.mockito:mockito-core:jar:5.21.0:compile
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:jar:4.0.1:compile
-[ERROR]     +-org.mockito:mockito-core:jar:5.20.0:compile
-[ERROR] 
-[ERROR] 
-[ERROR] Dependency convergence error for org.junit.platform:junit-platform-commons:jar:1.12.2. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-com.tngtech.archunit:archunit-junit5:jar:1.4.1:compile
-[ERROR]     +-com.tngtech.archunit:archunit-junit5-engine:jar:1.4.1:runtime
-[ERROR]       +-com.tngtech.archunit:archunit-junit5-engine-api:jar:1.4.1:runtime
-[ERROR]         +-org.junit.platform:junit-platform-engine:jar:1.12.2:runtime
-[ERROR]           +-org.junit.platform:junit-platform-commons:jar:1.12.2:runtime
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:pom:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-junit-jupiter:jar:5.21.0:compile
-[ERROR]     +-org.junit.jupiter:junit-jupiter-api:jar:5.13.4:compile
-[ERROR]       +-org.junit.platform:junit-platform-commons:jar:1.13.4:compile
-[ERROR] 
-[ERROR] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps failed with message:
-[ERROR] Failed while enforcing RequireUpperBoundDeps. The error(s) are [
-[ERROR] Require upper bound dependencies error for org.ow2.asm:asm:9.9. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:0.8.14
-[ERROR]     +-org.jacoco:org.jacoco.core:0.8.14
-[ERROR]       +-org.ow2.asm:asm:9.9
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:0.8.14
-[ERROR]     +-org.jacoco:org.jacoco.core:0.8.14
-[ERROR]       +-org.ow2.asm:asm-commons:9.9.1 (managed) <-- org.ow2.asm:asm-commons:9.9
-[ERROR]         +-org.ow2.asm:asm:9.9.1
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:0.8.14
-[ERROR]     +-org.jacoco:org.jacoco.core:0.8.14
-[ERROR]       +-org.ow2.asm:asm-tree:9.9
-[ERROR]         +-org.ow2.asm:asm:9.9
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:4.0.1
-[ERROR]     +-net.minidev:json-smart:2.6.0
-[ERROR]       +-net.minidev:accessors-smart:2.6.0
-[ERROR]         +-org.ow2.asm:asm:9.7.1
-[ERROR] , 
-[ERROR] Require upper bound dependencies error for org.ow2.asm:asm-tree:9.9. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:0.8.14
-[ERROR]     +-org.jacoco:org.jacoco.core:0.8.14
-[ERROR]       +-org.ow2.asm:asm-tree:9.9
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.jacoco:org.jacoco.ant:0.8.14
-[ERROR]     +-org.jacoco:org.jacoco.core:0.8.14
-[ERROR]       +-org.ow2.asm:asm-commons:9.9.1 (managed) <-- org.ow2.asm:asm-commons:9.9
-[ERROR]         +-org.ow2.asm:asm-tree:9.9.1
-[ERROR] , 
-[ERROR] Require upper bound dependencies error for org.junit.platform:junit-platform-engine:1.12.2 [runtime]. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-com.tngtech.archunit:archunit-junit5:1.4.1
-[ERROR]     +-com.tngtech.archunit:archunit-junit5-engine:1.4.1 [runtime]
-[ERROR]       +-com.tngtech.archunit:archunit-junit5-engine-api:1.4.1 [runtime]
-[ERROR]         +-org.junit.platform:junit-platform-engine:1.12.2 [runtime]
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:4.0.1
-[ERROR]     +-org.junit.jupiter:junit-jupiter:6.0.1
-[ERROR]       +-org.junit.jupiter:junit-jupiter-engine:6.0.1 [runtime]
-[ERROR]         +-org.junit.platform:junit-platform-engine:6.0.1 [runtime]
-[ERROR] , 
-[ERROR] Require upper bound dependencies error for org.junit.jupiter:junit-jupiter-api:5.13.4. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-junit-jupiter:5.21.0
-[ERROR]     +-org.junit.jupiter:junit-jupiter-api:5.13.4
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:4.0.1
-[ERROR]     +-org.junit.jupiter:junit-jupiter:6.0.1
-[ERROR]       +-org.junit.jupiter:junit-jupiter-api:6.0.1
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:4.0.1
-[ERROR]     +-org.junit.jupiter:junit-jupiter:6.0.1
-[ERROR]       +-org.junit.jupiter:junit-jupiter-params:6.0.1
-[ERROR]         +-org.junit.jupiter:junit-jupiter-api:6.0.1
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:4.0.1
-[ERROR]     +-org.junit.jupiter:junit-jupiter:6.0.1
-[ERROR]       +-org.junit.jupiter:junit-jupiter-engine:6.0.1 [runtime]
-[ERROR]         +-org.junit.jupiter:junit-jupiter-api:6.0.1 [runtime]
-[ERROR] , 
-[ERROR] Require upper bound dependencies error for org.mockito:mockito-core:5.2.0. Paths to dependency are:
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-inline:5.2.0
-[ERROR]     +-org.mockito:mockito-core:5.2.0
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.mockito:mockito-junit-jupiter:5.21.0
-[ERROR]     +-org.mockito:mockito-core:5.21.0
-[ERROR] and
-[ERROR] +-com.lmco.crt:crt-test-dependencies:0.5.0-SNAPSHOT
-[ERROR]   +-org.springframework.boot:spring-boot-starter-test:4.0.1
-[ERROR]     +-org.mockito:mockito-core:5.20.0
-[ERROR] ]
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
-[ERROR] 
-[ERROR] After correcting the problems, you can resume the build with the command
-[ERROR]   mvn <args> -rf :crt-test-dependencies
+[INFO] Total time:  5.446 s
+[INFO] Finished at: 2026-01-14T19:23:28-06:00
+[INFO] ------------------------------------------------------------------------
