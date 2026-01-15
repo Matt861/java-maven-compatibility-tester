@@ -35,6 +35,8 @@ mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text
 
 mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="repos/repo4"
 
+mvn dependency:tree -Dverbose -DoutputFile=dependency-tree-verbose.txt -DoutputType=text -Dmaven.repo.local="repos/repo4"
+
 See all trees that contain a dependency:
 
 mvn -Dincludes=commons-codec:commons-codec -Dverbose dependency:tree

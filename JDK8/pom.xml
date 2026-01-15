@@ -16,9 +16,21 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+<!--        <maven.compiler.source>8</maven.compiler.source>-->
+<!--        <maven.compiler.target>8</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Keep versions centralized -->
+        <maven.enforcer.plugin.version>3.6.2</maven.enforcer.plugin.version>
+        <extra.enforcer.rules.version>1.11.0</extra.enforcer.rules.version>
+
+        <!-- Your policy -->
+        <required.jdk>[25,)</required.jdk>
+        <max.bytecode.jdk>25</max.bytecode.jdk>
+
+        <!-- Dependency versions -->
         <antlr.version>2.7.7</antlr.version>
         <apm-agent.version>1.46.0</apm-agent.version>
         <archunit-junit5.version>0.22.0</archunit-junit5.version>
@@ -1141,35 +1153,147 @@
     </dependencyManagement>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${maven.enforcer.plugin.version}</version>
+
+                    <executions>
+                        <execution>
+                            <id>enforce-build-gates</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+
+                            <configuration>
+                                <fail>true</fail>
+
+                                <rules>
+
+                                    <!-- Gate A: must build with JDK 25+ -->
+                                    <requireJavaVersion>
+                                        <version>${required.jdk}</version>
+                                        <message>
+                                            This build must run on JDK 25+ (your JAVA_HOME / toolchain is too old).
+                                        </message>
+                                    </requireJavaVersion>
+
+                                    <!-- Gate B: keep dependency graph sane -->
+                                    <dependencyConvergence />
+
+                                    <requireUpperBoundDeps>
+                                        <!-- Optional: sometimes you may need to exclude known-bad edges temporarily -->
+                                        <!-- <excludes>
+                                          <exclude>some.group:some-artifact</exclude>
+                                        </excludes> -->
+                                    </requireUpperBoundDeps>
+
+                                    <!-- Gate C: block dependencies compiled for > JDK 25 -->
+                                    <enforceBytecodeVersion>
+                                        <maxJdkVersion>${max.bytecode.jdk}</maxJdkVersion>
+
+                                        <!-- Consider including test scope; test libs often use newer bytecode too -->
+                                        <scopes>
+                                            <scope>compile</scope>
+                                            <scope>runtime</scope>
+                                            <scope>test</scope>
+                                        </scopes>
+
+                                        <!-- If true: also checks module-info + multi-release jar versions -->
+                                        <strict>true</strict>
+
+                                        <!-- Optional: you can temporarily exclude a known offender while upgrading -->
+                                        <!-- <excludes>
+                                          <exclude>groupId:artifactId</exclude>
+                                        </excludes> -->
+                                    </enforceBytecodeVersion>
+
+                                </rules>
+                            </configuration>
+                        </execution>
+                    </executions>
+
+                    <!-- Needed for enforceBytecodeVersion -->
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.mojo</groupId>
+                            <artifactId>extra-enforcer-rules</artifactId>
+                            <version>${extra.enforcer.rules.version}</version>
+                        </dependency>
+                    </dependencies>
+
+                </plugin>
+                <plugin>
+                    <groupId>org.cyclonedx</groupId>
+                    <artifactId>cyclonedx-maven-plugin</artifactId>
+                    <version>2.9.1</version>
+                    <executions>
+                        <execution>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>makeAggregateBom</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <projectType>library</projectType>
+                        <schemaVersion>1.3</schemaVersion>
+                        <includeBomSerialNumber>true</includeBomSerialNumber>
+                        <includeCompileScope>true</includeCompileScope>
+                        <includeProvidedScope>true</includeProvidedScope>
+                        <includeRuntimeScope>true</includeRuntimeScope>
+                        <includeSystemScope>true</includeSystemScope>
+                        <includeTestScope>true</includeTestScope>
+                        <includeLicenseText>true</includeLicenseText>
+                        <outputFormat>json</outputFormat>
+                        <outputName>cyclone-dx-bom</outputName>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <!-- Make sure it actually runs (pluginManagement alone doesn't execute) -->
         <plugins>
             <plugin>
-                <groupId>org.cyclonedx</groupId>
-                <artifactId>cyclonedx-maven-plugin</artifactId>
-                <version>2.5.1</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>makeAggregateBom</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <projectType>library</projectType>
-                    <schemaVersion>1.3</schemaVersion>
-                    <includeBomSerialNumber>true</includeBomSerialNumber>
-                    <includeCompileScope>true</includeCompileScope>
-                    <includeProvidedScope>true</includeProvidedScope>
-                    <includeRuntimeScope>true</includeRuntimeScope>
-                    <includeSystemScope>true</includeSystemScope>
-                    <includeTestScope>true</includeTestScope>
-                    <includeLicenseText>true</includeLicenseText>
-                    <outputFormat>json</outputFormat>
-                    <outputName>cyclone-dx-bom</outputName>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.cyclonedx</groupId>-->
+<!--                <artifactId>cyclonedx-maven-plugin</artifactId>-->
+<!--                <version>2.5.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>makeAggregateBom</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <projectType>library</projectType>-->
+<!--                    <schemaVersion>1.3</schemaVersion>-->
+<!--                    <includeBomSerialNumber>true</includeBomSerialNumber>-->
+<!--                    <includeCompileScope>true</includeCompileScope>-->
+<!--                    <includeProvidedScope>true</includeProvidedScope>-->
+<!--                    <includeRuntimeScope>true</includeRuntimeScope>-->
+<!--                    <includeSystemScope>true</includeSystemScope>-->
+<!--                    <includeTestScope>true</includeTestScope>-->
+<!--                    <includeLicenseText>true</includeLicenseText>-->
+<!--                    <outputFormat>json</outputFormat>-->
+<!--                    <outputName>cyclone-dx-bom</outputName>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 
 </project>

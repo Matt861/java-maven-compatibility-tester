@@ -4,7 +4,7 @@
   "serialNumber" : "urn:uuid:e02e082d-a09d-31bd-a04a-9af358f0da93",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-01-13T18:58:19Z",
+    "timestamp" : "2026-01-15T01:06:02Z",
     "tools" : [
       {
         "vendor" : "OWASP Foundation",
@@ -5330,44 +5330,44 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.jetbrains/annotations@26.0.2-1?type=jar",
+      "bom-ref" : "pkg:maven/org.jetbrains/annotations@17.0.0?type=jar",
       "group" : "org.jetbrains",
       "name" : "annotations",
-      "version" : "26.0.2-1",
+      "version" : "17.0.0",
       "description" : "A set of annotations used for code inspection support and code documentation.",
       "scope" : "required",
       "hashes" : [
         {
           "alg" : "MD5",
-          "content" : "ef0e782af9ee48fac1156485366d7cc9"
+          "content" : "7b06437ed47fa7b4a8ec8909f4fb9022"
         },
         {
           "alg" : "SHA-1",
-          "content" : "c7ce3cdeda3d18909368dfe5977332dfad326c6d"
+          "content" : "8ceead41f4e71821919dbdb7a9847608f1a938cb"
         },
         {
           "alg" : "SHA-256",
-          "content" : "2037be378980d3ba9333e97955f3b2cde392aa124d04ca73ce2eee6657199297"
+          "content" : "195fb0da046d55bb042e91543484cf1da68b02bb7afbfe031f229e45ac84b3f2"
         },
         {
           "alg" : "SHA-512",
-          "content" : "c7be38957318874b837d029dc7b2a1f8b009feaa5362a56cba4f4c8a7d502993b3c900ee338eb9c9ee9494d7fd946bd280403eee28b244d213edb0b145a9ebfd"
+          "content" : "839ec18d4a6f930ecd39827ebd4013c13a7176003543b8f60056770179032648faf1651e9e73109e811881b68a39757ca7e39731a61ff4a3461637b196fe4f7b"
         },
         {
           "alg" : "SHA-384",
-          "content" : "6a66cebde6fc0202399aab4cc1b84d50cdcc5906433cb71604e404525e10f2086900730449c00daf0a922a2036a35314"
+          "content" : "c9d045a68ef2b0d5b12aa00b636e43af22de4c02f4dfcc6b5b7b04fdd57c98c7246decd2e5dc3eb9f1b10d929ac33a11"
         },
         {
           "alg" : "SHA3-384",
-          "content" : "cdafaaa1672616377ba393f61c62cebf9996ba62db4df3a18586aaa100a5875db9a1e132cfbb2e098c37d9809fab632d"
+          "content" : "25ad733b460552705dd624634191beb909a6ed35f2475723faa06551d9542b87e724266f5f6003350c39965a92b5e54c"
         },
         {
           "alg" : "SHA3-256",
-          "content" : "dac6cdbea13b4fd7c84a6254d7d65859b8b74139ba0eeb662e86f5dcf1fce93f"
+          "content" : "f731cde48fa6a20e57e97a829184492cfa5fe0e14a5082e7810205c2b9f1ac1c"
         },
         {
           "alg" : "SHA3-512",
-          "content" : "89980b6f753349bb6fa2149e404d84937d8d90edd626b856aa5de23dbd82966d22b93f053761a5cfd8ec440c069a023244949239965be3ce5485711dde0104d6"
+          "content" : "b6698f9d65c0a364854717e64edd5df4fb1c97300d4dc3cc7ae7194b0b7b9e826b3d800dd362e2ad05417dac6ee3b2164294796c3ae46f4cbed840c2481b79b1"
         }
       ],
       "licenses" : [
@@ -5382,7 +5382,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.jetbrains/annotations@26.0.2-1?type=jar",
+      "purl" : "pkg:maven/org.jetbrains/annotations@17.0.0?type=jar",
       "externalReferences" : [
         {
           "type" : "website",
@@ -5904,11 +5904,11 @@
     {
       "ref" : "pkg:maven/org.rnorth.duct-tape/duct-tape@1.0.8?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.jetbrains/annotations@26.0.2-1?type=jar"
+        "pkg:maven/org.jetbrains/annotations@17.0.0?type=jar"
       ]
     },
     {
-      "ref" : "pkg:maven/org.jetbrains/annotations@26.0.2-1?type=jar",
+      "ref" : "pkg:maven/org.jetbrains/annotations@17.0.0?type=jar",
       "dependsOn" : [ ]
     },
     {

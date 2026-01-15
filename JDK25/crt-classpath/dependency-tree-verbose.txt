@@ -156,7 +156,7 @@ com.lmco.crt:crt-classpath-dependencies:pom:1.0.0-SNAPSHOT
    |  +- io.swagger:swagger-parser:jar:1.0.75:compile (version managed from 1.0.75)
    |  |  +- io.swagger:swagger-core:jar:1.6.16:compile (version managed from 1.6.16)
    |  |  |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:compile (version managed from 2.3.3)
-   |  |  |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (version managed from 2.1.4)
+   |  |  |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.4:compile
    |  |  |  +- (org.apache.commons:commons-lang3:jar:3.18.0:compile - version managed from 3.17.0; omitted for duplicate)
    |  |  |  +- (org.slf4j:slf4j-api:jar:2.0.17:compile - version managed from 2.0.9; omitted for duplicate)
    |  |  |  +- (com.fasterxml.jackson.core:jackson-annotations:jar:2.20:compile - version managed from 2.19.0; omitted for duplicate)

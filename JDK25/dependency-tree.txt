@@ -1,1 +1,0 @@
-com.lmco.crt:crt-dependencies-parent:pom:1.0.0-SNAPSHOT
