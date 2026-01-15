@@ -10,7 +10,7 @@ com.lmco.crt:crt-dependencies:pom:1.0.0-SNAPSHOT
 +- org.ow2.asm:asm-commons:jar:9.9.1:compile
 |  +- org.ow2.asm:asm:jar:9.9.1:compile
 |  \- org.ow2.asm:asm-tree:jar:9.9.1:compile
-+- org.aspectj:aspectjweaver:jar:1.9.25.1:compile
++- org.aspectj:aspectjweaver:jar:1.9.25:compile
 +- org.dom4j:dom4j:jar:2.2.0:compile
 +- org.dhatim:fastexcel:jar:0.19.0:compile
 |  \- com.github.rzymek:opczip:jar:1.2.0:compile

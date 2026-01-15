@@ -4,7 +4,7 @@
   "serialNumber" : "urn:uuid:3316d6a2-e510-3fac-b745-08e2b1a8040f",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-01-15T01:23:26Z",
+    "timestamp" : "2026-01-15T01:34:47Z",
     "tools" : [
       {
         "vendor" : "OWASP Foundation",
@@ -897,44 +897,44 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1?type=jar",
+      "bom-ref" : "pkg:maven/org.aspectj/aspectjweaver@1.9.25?type=jar",
       "group" : "org.aspectj",
       "name" : "aspectjweaver",
-      "version" : "1.9.25.1",
+      "version" : "1.9.25",
       "description" : "The AspectJ weaver applies aspects to Java classes. It can be used as a Java agent in order to apply load-time weaving (LTW) during class-loading and also contains the AspectJ runtime classes.",
       "scope" : "required",
       "hashes" : [
         {
           "alg" : "MD5",
-          "content" : "7a88f606f52185a15a1527c968f55dfb"
+          "content" : "89f51f6d89cafd0a827dd7180c0c7a72"
         },
         {
           "alg" : "SHA-1",
-          "content" : "a713c790da4d794c7dfb542b550d4e44898d5e23"
+          "content" : "4919d90e19bf8f0f33318c01c93ba92d9a354b21"
         },
         {
           "alg" : "SHA-256",
-          "content" : "4fe86fdc18faea571f29129c70eaad5d121363504a06d7907be88f6c60ba3116"
+          "content" : "a7ec6d1f7dd819d743e3a20f95609ec91e41f0b7b4e542b2ff62cfa0eb69b67e"
         },
         {
           "alg" : "SHA-512",
-          "content" : "c3b99289f305795c7ed662a0e86219ce8458e7797e38f6222198c74dcd5bcf9c2a026a83584ebe2d514d17da2ca382c897acb940e55c471bad0154719cb4ba46"
+          "content" : "5303a0c38edbb1a9227ee99f0301acd14b9b35073c5fcdde0134eae6ade9a2c89a9e4956153e577d2d0dec32def23f195470618b0f5124796988c287a6481e2b"
         },
         {
           "alg" : "SHA-384",
-          "content" : "7bc5761d491b67ae952a063c94102c58b902bc7aa0b5c3995d7dd8727ddde74dbb33e6312db6512fa5f7817c350e303f"
+          "content" : "3e70831986d739f7633bf50753521f84c14c88cd60ec5a4af930001e31875f7e3e9966d4b7b5af365d0c2efba70e4dcc"
         },
         {
           "alg" : "SHA3-384",
-          "content" : "37b2304bb12db621c350c0231f77f1afd41246dfc488128eeb02bb9ff6ab9c5eeab086fcc47815c20da338a043c986bb"
+          "content" : "102b82bfcfad339a6c35a12f71dee54eb012c758b6b52cab775a83001801cf9c20d499ab3eb43073319bfc7f5d1d3e40"
         },
         {
           "alg" : "SHA3-256",
-          "content" : "689afe66772cae896d23ffe63ab938a26fbdd55fb06361b694cfb3aa2900a63d"
+          "content" : "2ca94aea7689f29295e0e7e5886009e5a726c3590dc49c8bd0e2d4a800f22e6a"
         },
         {
           "alg" : "SHA3-512",
-          "content" : "141f70786de40250b7fc4caac8f88362bd6316de02bcb4d746b3d7d2f46518521e363696db9dd7dd696d639c6afc9fa98868d05f7da662371293746f4cc0a437"
+          "content" : "59e9e4df394d723fa2981b37c4addd428a6471f42d158db38c38223df4949f8a202a97ff77272a459dd892c4b7676dc25c95eed8387c1224cc5fd496f241bd59"
         }
       ],
       "licenses" : [
@@ -949,11 +949,15 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1?type=jar",
+      "purl" : "pkg:maven/org.aspectj/aspectjweaver@1.9.25?type=jar",
       "externalReferences" : [
         {
           "type" : "website",
           "url" : "https://www.eclipse.org/aspectj/"
+        },
+        {
+          "type" : "distribution",
+          "url" : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
         },
         {
           "type" : "vcs",
@@ -14419,7 +14423,7 @@
         "pkg:maven/org.antlr/antlr4@4.13.2?type=jar",
         "pkg:maven/co.elastic.apm/apm-agent-attach@1.55.2?type=jar",
         "pkg:maven/org.ow2.asm/asm-commons@9.9.1?type=jar",
-        "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1?type=jar",
+        "pkg:maven/org.aspectj/aspectjweaver@1.9.25?type=jar",
         "pkg:maven/org.dom4j/dom4j@2.2.0?type=jar",
         "pkg:maven/org.dhatim/fastexcel@0.19.0?type=jar",
         "pkg:maven/org.dhatim/fastexcel-reader@0.19.0?type=jar",
@@ -14536,7 +14540,7 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1?type=jar",
+      "ref" : "pkg:maven/org.aspectj/aspectjweaver@1.9.25?type=jar",
       "dependsOn" : [ ]
     },
     {

@@ -31,7 +31,7 @@
         <antlr.version>4.13.2</antlr.version>
         <apm-agent.version>1.55.2</apm-agent.version>
         <archunit-junit5.version>1.4.1</archunit-junit5.version>
-        <aspectjweaver.version>1.9.25.1</aspectjweaver.version>
+        <aspectjweaver.version>1.9.25</aspectjweaver.version>
         <asm.version>9.9.1</asm.version>
         <byte-buddy.version>1.18.3</byte-buddy.version>
         <classmate.version>1.7.0</classmate.version>

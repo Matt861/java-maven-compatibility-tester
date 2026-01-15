@@ -79,13 +79,13 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary for crt-dependencies-parent 1.0.0-SNAPSHOT:
 [INFO] 
-[INFO] crt-dependencies-parent ............................ SUCCESS [  0.200 s]
-[INFO] crt-dependencies ................................... SUCCESS [  3.210 s]
-[INFO] crt-test-dependencies .............................. SUCCESS [  0.952 s]
-[INFO] crt-classpath-dependencies ......................... SUCCESS [  1.012 s]
+[INFO] crt-dependencies-parent ............................ SUCCESS [  0.191 s]
+[INFO] crt-dependencies ................................... SUCCESS [  3.196 s]
+[INFO] crt-test-dependencies .............................. SUCCESS [  0.945 s]
+[INFO] crt-classpath-dependencies ......................... SUCCESS [  1.006 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.446 s
-[INFO] Finished at: 2026-01-14T19:23:28-06:00
+[INFO] Total time:  5.408 s
+[INFO] Finished at: 2026-01-14T19:34:49-06:00
 [INFO] ------------------------------------------------------------------------
