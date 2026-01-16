@@ -12,8 +12,6 @@
 [INFO]   from pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies-parent ---
-[INFO] 
 [INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies-parent ---
 [INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
 [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
@@ -25,9 +23,6 @@
 [INFO]   from crt-service\pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ crt-dependencies ---
-[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-service\target
-[INFO] 
 [INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-dependencies ---
 [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
 [INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
@@ -35,7 +30,7 @@
 [INFO] 
 [INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ crt-dependencies ---
 [INFO] CycloneDX: Resolving Dependencies
-[INFO] CycloneDX: Creating BOM version 1.3 with 201 component(s)
+[INFO] CycloneDX: Creating BOM version 1.3 with 200 component(s)
 [INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-service\target\cyclone-dx-bom.json
 [INFO]            attaching as crt-dependencies-1.0.0-SNAPSHOT-cyclonedx.json
 [INFO] 
@@ -43,9 +38,6 @@
 [INFO] Building crt-test-dependencies 1.0.0-SNAPSHOT                      [3/4]
 [INFO]   from crt-test\pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
-[INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ crt-test-dependencies ---
-[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-test\target
 [INFO] 
 [INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-test-dependencies ---
 [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
@@ -63,9 +55,6 @@
 [INFO]   from crt-classpath\pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ crt-classpath-dependencies ---
-[INFO] Deleting C:\Users\mattw\IdeaProjects\java-maven-compatibility-tester2\JDK25\crt-classpath\target
-[INFO] 
 [INFO] --- enforcer:3.6.2:enforce (enforce-build-gates) @ crt-classpath-dependencies ---
 [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
 [INFO] Rule 2: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
@@ -79,13 +68,13 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary for crt-dependencies-parent 1.0.0-SNAPSHOT:
 [INFO] 
-[INFO] crt-dependencies-parent ............................ SUCCESS [  0.191 s]
-[INFO] crt-dependencies ................................... SUCCESS [  3.196 s]
-[INFO] crt-test-dependencies .............................. SUCCESS [  0.945 s]
-[INFO] crt-classpath-dependencies ......................... SUCCESS [  1.006 s]
+[INFO] crt-dependencies-parent ............................ SUCCESS [  0.200 s]
+[INFO] crt-dependencies ................................... SUCCESS [  4.102 s]
+[INFO] crt-test-dependencies .............................. SUCCESS [  1.287 s]
+[INFO] crt-classpath-dependencies ......................... SUCCESS [  1.314 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.408 s
-[INFO] Finished at: 2026-01-14T19:34:49-06:00
+[INFO] Total time:  6.993 s
+[INFO] Finished at: 2026-01-15T18:14:49-06:00
 [INFO] ------------------------------------------------------------------------

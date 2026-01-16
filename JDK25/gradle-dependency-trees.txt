@@ -157,24 +157,22 @@ compileClasspath - Compile classpath for source set 'main'.
      |         \--- io.micrometer:micrometer-observation:1.16.1 (*)
      +--- org.springframework.boot:spring-boot-starter-jdbc:4.0.1
      |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
-     |    +--- org.springframework.boot:spring-boot-jdbc:4.0.1
-     |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    +--- org.springframework.boot:spring-boot-sql:4.0.1
-     |    |    |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    +--- org.springframework.boot:spring-boot-transaction:4.0.1
-     |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
-     |    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    |    |    \--- org.springframework:spring-tx:7.0.2
-     |    |    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-     |    |    |    |         \--- org.springframework:spring-core:7.0.2 (*)
-     |    |    |    \--- org.springframework:spring-tx:7.0.2 (*)
-     |    |    \--- org.springframework:spring-jdbc:7.0.2
-     |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-     |    |         +--- org.springframework:spring-core:7.0.2 (*)
-     |    |         \--- org.springframework:spring-tx:7.0.2 (*)
-     |    \--- com.zaxxer:HikariCP:7.0.2
-     |         \--- org.slf4j:slf4j-api:2.0.17
+     |    \--- org.springframework.boot:spring-boot-jdbc:4.0.1
+     |         +--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         +--- org.springframework.boot:spring-boot-sql:4.0.1
+     |         |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         +--- org.springframework.boot:spring-boot-transaction:4.0.1
+     |         |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
+     |         |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         |    |    \--- org.springframework:spring-tx:7.0.2
+     |         |    |         +--- org.springframework:spring-beans:7.0.2 (*)
+     |         |    |         \--- org.springframework:spring-core:7.0.2 (*)
+     |         |    \--- org.springframework:spring-tx:7.0.2 (*)
+     |         \--- org.springframework:spring-jdbc:7.0.2
+     |              +--- org.springframework:spring-beans:7.0.2 (*)
+     |              +--- org.springframework:spring-core:7.0.2 (*)
+     |              \--- org.springframework:spring-tx:7.0.2 (*)
      +--- org.springframework.boot:spring-boot-starter-validation:4.0.1
      |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
      |    \--- org.springframework.boot:spring-boot-validation:4.0.1
@@ -679,24 +677,22 @@ productionRuntimeClasspath
 |    |         \--- io.micrometer:micrometer-observation:1.16.1 (*)
 |    +--- org.springframework.boot:spring-boot-starter-jdbc:4.0.1
 |    |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
-|    |    +--- org.springframework.boot:spring-boot-jdbc:4.0.1
-|    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    +--- org.springframework.boot:spring-boot-sql:4.0.1
-|    |    |    |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    +--- org.springframework.boot:spring-boot-transaction:4.0.1
-|    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
-|    |    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    |    |    \--- org.springframework:spring-tx:7.0.2
-|    |    |    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-|    |    |    |    |         \--- org.springframework:spring-core:7.0.2 (*)
-|    |    |    |    \--- org.springframework:spring-tx:7.0.2 (*)
-|    |    |    \--- org.springframework:spring-jdbc:7.0.2
-|    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-|    |    |         +--- org.springframework:spring-core:7.0.2 (*)
-|    |    |         \--- org.springframework:spring-tx:7.0.2 (*)
-|    |    \--- com.zaxxer:HikariCP:7.0.2
-|    |         \--- org.slf4j:slf4j-api:2.0.17
+|    |    \--- org.springframework.boot:spring-boot-jdbc:4.0.1
+|    |         +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         +--- org.springframework.boot:spring-boot-sql:4.0.1
+|    |         |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         +--- org.springframework.boot:spring-boot-transaction:4.0.1
+|    |         |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
+|    |         |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         |    |    \--- org.springframework:spring-tx:7.0.2
+|    |         |    |         +--- org.springframework:spring-beans:7.0.2 (*)
+|    |         |    |         \--- org.springframework:spring-core:7.0.2 (*)
+|    |         |    \--- org.springframework:spring-tx:7.0.2 (*)
+|    |         \--- org.springframework:spring-jdbc:7.0.2
+|    |              +--- org.springframework:spring-beans:7.0.2 (*)
+|    |              +--- org.springframework:spring-core:7.0.2 (*)
+|    |              \--- org.springframework:spring-tx:7.0.2 (*)
 |    +--- org.springframework.boot:spring-boot-starter-validation:4.0.1
 |    |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
 |    |    \--- org.springframework.boot:spring-boot-validation:4.0.1
@@ -1012,7 +1008,6 @@ productionRuntimeClasspath
 +--- io.micrometer:micrometer-observation:{strictly 1.16.1} -> 1.16.1 (c)
 +--- io.micrometer:micrometer-jakarta9:{strictly 1.16.1} -> 1.16.1 (c)
 +--- org.springframework.boot:spring-boot-jdbc:{strictly 4.0.1} -> 4.0.1 (c)
-+--- com.zaxxer:HikariCP:{strictly 7.0.2} -> 7.0.2 (c)
 +--- org.springframework.boot:spring-boot-validation:{strictly 4.0.1} -> 4.0.1 (c)
 +--- org.springframework.boot:spring-boot-starter-jackson:{strictly 4.0.1} -> 4.0.1 (c)
 +--- org.springframework.boot:spring-boot-starter-tomcat:{strictly 4.0.1} -> 4.0.1 (c)
@@ -1385,24 +1380,22 @@ runtimeClasspath - Runtime classpath of source set 'main'.
      |         \--- io.micrometer:micrometer-observation:1.16.1 (*)
      +--- org.springframework.boot:spring-boot-starter-jdbc:4.0.1
      |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
-     |    +--- org.springframework.boot:spring-boot-jdbc:4.0.1
-     |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    +--- org.springframework.boot:spring-boot-sql:4.0.1
-     |    |    |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    +--- org.springframework.boot:spring-boot-transaction:4.0.1
-     |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
-     |    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-     |    |    |    |    \--- org.springframework:spring-tx:7.0.2
-     |    |    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-     |    |    |    |         \--- org.springframework:spring-core:7.0.2 (*)
-     |    |    |    \--- org.springframework:spring-tx:7.0.2 (*)
-     |    |    \--- org.springframework:spring-jdbc:7.0.2
-     |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-     |    |         +--- org.springframework:spring-core:7.0.2 (*)
-     |    |         \--- org.springframework:spring-tx:7.0.2 (*)
-     |    \--- com.zaxxer:HikariCP:7.0.2
-     |         \--- org.slf4j:slf4j-api:2.0.17
+     |    \--- org.springframework.boot:spring-boot-jdbc:4.0.1
+     |         +--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         +--- org.springframework.boot:spring-boot-sql:4.0.1
+     |         |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         +--- org.springframework.boot:spring-boot-transaction:4.0.1
+     |         |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
+     |         |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+     |         |    |    \--- org.springframework:spring-tx:7.0.2
+     |         |    |         +--- org.springframework:spring-beans:7.0.2 (*)
+     |         |    |         \--- org.springframework:spring-core:7.0.2 (*)
+     |         |    \--- org.springframework:spring-tx:7.0.2 (*)
+     |         \--- org.springframework:spring-jdbc:7.0.2
+     |              +--- org.springframework:spring-beans:7.0.2 (*)
+     |              +--- org.springframework:spring-core:7.0.2 (*)
+     |              \--- org.springframework:spring-tx:7.0.2 (*)
      +--- org.springframework.boot:spring-boot-starter-validation:4.0.1
      |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
      |    \--- org.springframework.boot:spring-boot-validation:4.0.1
@@ -1762,24 +1755,22 @@ testCompileClasspath - Compile classpath for source set 'test'.
 |    |         \--- io.micrometer:micrometer-observation:1.16.1 (*)
 |    +--- org.springframework.boot:spring-boot-starter-jdbc:4.0.1
 |    |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
-|    |    +--- org.springframework.boot:spring-boot-jdbc:4.0.1
-|    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    +--- org.springframework.boot:spring-boot-sql:4.0.1
-|    |    |    |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    +--- org.springframework.boot:spring-boot-transaction:4.0.1
-|    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
-|    |    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    |    |    \--- org.springframework:spring-tx:7.0.2
-|    |    |    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-|    |    |    |    |         \--- org.springframework:spring-core:7.0.2 (*)
-|    |    |    |    \--- org.springframework:spring-tx:7.0.2 (*)
-|    |    |    \--- org.springframework:spring-jdbc:7.0.2
-|    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-|    |    |         +--- org.springframework:spring-core:7.0.2 (*)
-|    |    |         \--- org.springframework:spring-tx:7.0.2 (*)
-|    |    \--- com.zaxxer:HikariCP:7.0.2
-|    |         \--- org.slf4j:slf4j-api:2.0.17
+|    |    \--- org.springframework.boot:spring-boot-jdbc:4.0.1
+|    |         +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         +--- org.springframework.boot:spring-boot-sql:4.0.1
+|    |         |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         +--- org.springframework.boot:spring-boot-transaction:4.0.1
+|    |         |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
+|    |         |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         |    |    \--- org.springframework:spring-tx:7.0.2
+|    |         |    |         +--- org.springframework:spring-beans:7.0.2 (*)
+|    |         |    |         \--- org.springframework:spring-core:7.0.2 (*)
+|    |         |    \--- org.springframework:spring-tx:7.0.2 (*)
+|    |         \--- org.springframework:spring-jdbc:7.0.2
+|    |              +--- org.springframework:spring-beans:7.0.2 (*)
+|    |              +--- org.springframework:spring-core:7.0.2 (*)
+|    |              \--- org.springframework:spring-tx:7.0.2 (*)
 |    +--- org.springframework.boot:spring-boot-starter-validation:4.0.1
 |    |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
 |    |    \--- org.springframework.boot:spring-boot-validation:4.0.1
@@ -2348,24 +2339,22 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |    |         \--- io.micrometer:micrometer-observation:1.16.1 (*)
 |    +--- org.springframework.boot:spring-boot-starter-jdbc:4.0.1
 |    |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
-|    |    +--- org.springframework.boot:spring-boot-jdbc:4.0.1
-|    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    +--- org.springframework.boot:spring-boot-sql:4.0.1
-|    |    |    |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    +--- org.springframework.boot:spring-boot-transaction:4.0.1
-|    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
-|    |    |    |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
-|    |    |    |    |    \--- org.springframework:spring-tx:7.0.2
-|    |    |    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-|    |    |    |    |         \--- org.springframework:spring-core:7.0.2 (*)
-|    |    |    |    \--- org.springframework:spring-tx:7.0.2 (*)
-|    |    |    \--- org.springframework:spring-jdbc:7.0.2
-|    |    |         +--- org.springframework:spring-beans:7.0.2 (*)
-|    |    |         +--- org.springframework:spring-core:7.0.2 (*)
-|    |    |         \--- org.springframework:spring-tx:7.0.2 (*)
-|    |    \--- com.zaxxer:HikariCP:7.0.2
-|    |         \--- org.slf4j:slf4j-api:2.0.17
+|    |    \--- org.springframework.boot:spring-boot-jdbc:4.0.1
+|    |         +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         +--- org.springframework.boot:spring-boot-sql:4.0.1
+|    |         |    \--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         +--- org.springframework.boot:spring-boot-transaction:4.0.1
+|    |         |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         |    +--- org.springframework.boot:spring-boot-persistence:4.0.1
+|    |         |    |    +--- org.springframework.boot:spring-boot:4.0.1 (*)
+|    |         |    |    \--- org.springframework:spring-tx:7.0.2
+|    |         |    |         +--- org.springframework:spring-beans:7.0.2 (*)
+|    |         |    |         \--- org.springframework:spring-core:7.0.2 (*)
+|    |         |    \--- org.springframework:spring-tx:7.0.2 (*)
+|    |         \--- org.springframework:spring-jdbc:7.0.2
+|    |              +--- org.springframework:spring-beans:7.0.2 (*)
+|    |              +--- org.springframework:spring-core:7.0.2 (*)
+|    |              \--- org.springframework:spring-tx:7.0.2 (*)
 |    +--- org.springframework.boot:spring-boot-starter-validation:4.0.1
 |    |    +--- org.springframework.boot:spring-boot-starter:4.0.1 (*)
 |    |    \--- org.springframework.boot:spring-boot-validation:4.0.1

@@ -118,11 +118,10 @@ com.lmco.crt:crt-dependencies:pom:1.0.0-SNAPSHOT
 |  +- io.micrometer:micrometer-observation:jar:1.16.1:compile
 |  \- io.micrometer:micrometer-jakarta9:jar:1.16.1:compile
 +- org.springframework.boot:spring-boot-starter-jdbc:jar:4.0.1:compile
-|  +- org.springframework.boot:spring-boot-jdbc:jar:4.0.1:compile
-|  |  +- org.springframework.boot:spring-boot-sql:jar:4.0.1:compile
-|  |  \- org.springframework.boot:spring-boot-transaction:jar:4.0.1:compile
-|  |     \- org.springframework.boot:spring-boot-persistence:jar:4.0.1:compile
-|  \- com.zaxxer:HikariCP:jar:7.0.2:compile
+|  \- org.springframework.boot:spring-boot-jdbc:jar:4.0.1:compile
+|     +- org.springframework.boot:spring-boot-sql:jar:4.0.1:compile
+|     \- org.springframework.boot:spring-boot-transaction:jar:4.0.1:compile
+|        \- org.springframework.boot:spring-boot-persistence:jar:4.0.1:compile
 +- org.springframework.boot:spring-boot-starter-validation:jar:4.0.1:compile
 |  \- org.springframework.boot:spring-boot-validation:jar:4.0.1:compile
 |     +- org.apache.tomcat.embed:tomcat-embed-el:jar:11.0.15:compile

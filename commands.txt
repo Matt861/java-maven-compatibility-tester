@@ -33,10 +33,14 @@ Generate dependency tree text file:
 
 mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="path/to/directory/{REPO FOLDER NAME}"
 
-mvn dependency:tree -Dverbose -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="repos/repo4"
+mvn dependency:tree -DoutputFile=dependency-tree.txt -DoutputType=text -Dmaven.repo.local="repos/repo4"
 
 mvn dependency:tree -Dverbose -DoutputFile=dependency-tree-verbose.txt -DoutputType=text -Dmaven.repo.local="repos/repo4"
 
 See all trees that contain a dependency:
 
 mvn -Dincludes=commons-codec:commons-codec -Dverbose dependency:tree
+
+Verify dependencies are correct:
+
+mvn verify -Dverbose -Dmaven.repo.local="repos/repo4" > dependency-verify.txt 2>&1
